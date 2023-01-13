@@ -1,8 +1,12 @@
 import bg from "../public/bg.jpg";
+
 import pic from "../public/pic.png";
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import axios from "axios";
+import btc from '../public/bitcoin.svg'
+import eth from '../public/eth.svg'
+import dog from '../public/dogecoin.svg'
 
 export default function Home() {
   const axios = require("axios");
@@ -23,16 +27,17 @@ axios.request(options).then(function (response) {
 });
   return (
     <>
-    <Navbar/>    
+    <Navbar/>
     
 
     <div className="flex justify-between  text-white h-[90vh] landing bg-light_bg">
       <div className="mt-[150px] txt">
         <h1 className="mx-20 font-semibold text-9xl text-dark_bg">Cryptito</h1>
      <p className="mx-20 mt-10 text-3xl text-dark_bg">For live crypto currency news and prices</p>
+     
      <div className="flex mx-20  mt-10 gap-[80px] bh-w ">
       <div className="">
-      <button className="text-xl py-5 px-[80px]  see_more rounded-xl bg-dark_bg">See more <i class="uil uil-arrow-down"></i></button>
+      <button className="text-xl py-5 px-[80px] text-dark_bg  see_more rounded-xl bg-main_color">See more <i class="uil uil-arrow-down"></i></button>
 
       </div>
       <div className="">
@@ -60,12 +65,45 @@ axios.request(options).then(function (response) {
     </svg>
     
 </div>
-<div className="w-full h-[100vh] text-center prices">
+<div className="w-full h-[100vh] justify-center text-center prices">
       <input type="text" className="w-[500px] h-9 rounded pl-4" placeholder="Search crypto currency" />
+      <div className="grid items-center justify-center grid-cols-3 gap-10 text-center ml-[150px] mt-[100px] cards">
+          <div className="w-[350px] rounded border-2 border-dark_bg p-4 justify-center card bg-light_bg">
+            <div className="flex gap-2 title ">
+            <Image src={btc} width="30" height="30"/>
+
+               <h3>Bitcoin</h3>
+            </div>
+            <p>Price : 69k $</p>
+
+       
+      </div>
+      <div className="w-[350px] rounded  border-2 border-dark_bg  p-4 justify-center card bg-light_bg">
+      <div className="flex gap-2 title">
+            <Image src={eth} width="20" height="20"/>
+
+               <h3>Ethereum</h3>
+            </div>
+        <p>Price : 69k $</p>
+      </div>
+      <div className="w-[350px] rounded border-2 border-dark_bg p-4 justify-center card bg-light_bg">
+      <div className="flex gap-2 title">
+            <Image src={dog} width="30" height="30"/>
+
+               <h3>Bitcoin</h3>
+            </div>
+        <p>Price : 69k $</p>
+      </div>
+  
+      </div>
+    
 
 </div>
 
+
   </div>
+  
+
 
     </>
   );
