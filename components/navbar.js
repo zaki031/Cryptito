@@ -5,7 +5,7 @@ const navbar = () => {
     <div className='bg-hero'>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"></link>
     
-  <nav class=" border-gray-200 px-9 sm:px-4 py-2.5  bg-hero">
+  <nav class=" border-gray-200 px-9 sm:px-4 py-2.5  bg-light_bg">
       <div class="container flex flex-wrap items-center justify-between mx-">
         <a href="https://flowbite.com/" class="flex items-center">
             

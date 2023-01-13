@@ -9,7 +9,8 @@ module.exports = {
       colors:{
         'light_bg': '#F6F9FC',
         'dark_bg':'#0A2540',
-        'main_color':'#365BFF',
+        'main_color':'#73e4fd',
+        'nigg':'#c3c5f8',
       },
       backgroundImage: {
         'hero': "url('../public/bg.jpg')",
