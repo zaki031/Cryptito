@@ -37,11 +37,11 @@ axios.request(options).then(function (response) {
      
      <div className="flex mx-20  mt-10 gap-[80px] bh-w ">
       <div className="">
-      <button className="text-xl py-5 px-[80px] text-dark_bg  see_more rounded-xl bg-main_color">See more <i class="uil uil-arrow-down"></i></button>
+      <button className="text-md py-5 px-[80px] text-dark_bg  see_more rounded-xl bg-main_color">See more <i class="uil uil-arrow-down"></i></button>
 
       </div>
-      <div className="">
-      <button className="p-4 text-xl border-4 rounded-xl hover:bg-dark_bg hover:text-light_bg text-dark_bg border-dark_bg">Github repo <i class="uil uil-arrow-up-right"></i></button>
+      <div className="mt-[20px]">
+      <a href="https://github.com/zaki031/Cryptito" className="p-4 border-4 text-md mt- rounded-xl hover:bg-dark_bg hover:text-light_bg text-dark_bg border-dark_bg">Github repo <i class="uil uil-arrow-up-right"></i></a>
 
       </div>
 
@@ -67,7 +67,7 @@ axios.request(options).then(function (response) {
 </div>
 <div className="w-full h-[100vh] justify-center text-center prices">
       <input type="text" className="w-[500px] h-9 rounded pl-4" placeholder="Search crypto currency" />
-      <div className="grid items-center justify-center grid-cols-3 gap-10 text-center ml-[150px] mt-[100px] cards">
+      <div className="grid items-center  justify-center grid-cols-3 gap-10 text-center place-items-center	 mt-[100px] cards">
           <div className="w-[350px] rounded border-2 border-dark_bg p-4 justify-center card bg-light_bg">
             <div className="flex gap-2 title ">
             <Image src={btc} width="30" height="30"/>
@@ -84,15 +84,15 @@ axios.request(options).then(function (response) {
 
                <h3>Ethereum</h3>
             </div>
-        <p>Price : 69k $</p>
+        <p>Price : 1.03k $</p>
       </div>
       <div className="w-[350px] rounded border-2 border-dark_bg p-4 justify-center card bg-light_bg">
       <div className="flex gap-2 title">
             <Image src={dog} width="30" height="30"/>
 
-               <h3>Bitcoin</h3>
+               <h3>Dogecoin</h3>
             </div>
-        <p>Price : 69k $</p>
+        <p>Price : 0.1 $</p>
       </div>
   
       </div>
