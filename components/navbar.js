@@ -2,7 +2,7 @@ import React from 'react'
 
 const navbar = () => {
   return (
-    <div className='bg-hero'>
+    <div className='w-full bg-hero'>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"></link>
     
   <nav class=" border-gray-200 px-9 sm:px-4 py-2.5  bg-light_bg">
