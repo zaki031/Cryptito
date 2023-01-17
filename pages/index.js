@@ -109,6 +109,48 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="text-center latest-news">
+          <h1 className="text-5xl font-thin text-dark_bg ">
+            Latest crypto news
+          </h1>
+
+          <br />
+          <div className="grid items-center  justify-center lg:grid-cols-3 gap-10 text-center place-items-center	 mt-[100px] news">
+
+          <div className="rounded new border-dark_bg border-2 bg-light_bg w-[300px] p-4">
+            <h3>
+              bitcoin price increased again omg not expected at all no way
+            </h3>
+            <p>17/01/2023</p>
+          </div>
+          <div className="rounded new border-dark_bg border-2 place-content-center bg-light_bg w-[300px] p-4">
+            <h3>
+              bitcoin price increased again omg not expected at all no way
+            </h3>
+            <p>17/01/2023</p>
+          </div>
+          <div className="rounded new border-dark_bg border-2 place-content-center bg-light_bg w-[300px] p-4">
+            <h3>
+              bitcoin price increased again omg not expected at all no way
+            </h3>
+            <p>17/01/2023</p>
+          </div>
+          <div className="rounded new border-dark_bg border-2 place-content-center bg-light_bg w-[300px] p-4">
+            <h3>
+              bitcoin price increased again omg not expected at all no way
+            </h3>
+            <p>17/01/2023</p>
+          </div>
+          <div className="rounded new border-dark_bg border-2 place-content-center bg-light_bg w-[300px] p-4">
+            <h3>
+              bitcoin price increased again omg not expected at all no way
+            </h3>
+            <p>17/01/2023</p>
+          </div>
+          </div>
+          <br /><br />
+          
+        </div>
       </div>
     </>
   );
