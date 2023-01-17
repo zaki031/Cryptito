@@ -7,6 +7,8 @@ import axios from "axios";
 import btc from "../public/bitcoin.svg";
 import eth from "../public/eth.svg";
 import dog from "../public/dogecoin.svg";
+import Head from 'next/head'
+
 
 export default function Home() {
   const axios = require("axios");
@@ -30,6 +32,7 @@ export default function Home() {
     });
   return (
     <>
+    <Head><title>Cryptito</title></Head>
       <Navbar />
 
       <div className="flex justify-between  text-white h-[90vh] landing bg-light_bg">
