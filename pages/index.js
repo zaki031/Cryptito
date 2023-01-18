@@ -80,11 +80,10 @@ export default function Home() {
           </svg>
         </div>
         <div className="w-full h-[100vh] justify-center text-center prices">
-          <input
-            type="text"
-            className="w-[500px] h-9 rounded pl-4"
-            placeholder="Search crypto currency"
-          />
+        <h1 className="text-5xl font-thin text-dark_bg ">
+            Popular crypto currencies prices
+          </h1>
+
           <div className="grid items-center  justify-center lg:grid-cols-3 gap-10 text-center place-items-center	 mt-[100px] cards">
             <div className="w-[350px] rounded border-2 border-dark_bg p-4 justify-center card bg-light_bg">
               <div className="flex gap-2 title ">
