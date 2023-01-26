@@ -1,5 +1,5 @@
 import bg from "../public/bg.jpg";
-
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import pic from "../public/pic.png";
 import Image from "next/image";
 import Navbar from "../components/navbar";
@@ -21,6 +21,13 @@ export default function Home() {
       "X-RapidAPI-Host": "coinapi.p.rapidapi.com",
     },
   };
+  var Scroll   = require('react-scroll');
+var Element  = Scroll.Element;
+var scroller = Scroll.scroller;
+
+<Element name="prices-container"></Element>
+
+// Somewhere else, even another file
 
   axios
     .request(options)
@@ -46,7 +53,7 @@ export default function Home() {
 
           <div className="flex mx-20  mt-10 gap-[80px] bh-w ">
             <div className="">
-              <button className="text-md py-5 px-[80px] text-dark_bg  see_more rounded-xl bg-main_color">
+              <button  className="text-md py-5 px-[80px] text-dark_bg  see_more rounded-xl bg-main_color">
                 See more <i class="uil uil-arrow-down"></i>
               </button>
             </div>
