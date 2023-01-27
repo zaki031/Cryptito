@@ -13,9 +13,28 @@ const coin = ({ data }) => {
         <>
         <Navbar/>
         {
-           data.map((item)=>{
-            return <h4>{item.id}</h4>;
-        })
+           data.map((item)=>
+           {
+            return(
+                <div className="div">
+                      <div className="grid items-center  justify-center lg:grid-cols-3 gap-10 text-center place-items-center	 mt-[100px] cards">
+            <div className="w-[350px] rounded border-2 border-dark_bg p-4 justify-center card bg-light_bg">
+              <div className="flex gap-2 title ">
+
+                <h3>{item.id}</h3>
+              </div>
+              <p>Price : {item.price}</p>
+            </div>
+           
+          </div>
+                </div>
+           )
+           }
+
+           
+            
+            
+)
         }
 
 
@@ -40,6 +59,7 @@ export async function getServerSideProps({ params }) {
       `https://api.coingecko.com/api/v3/search?query=${id}`
     );
     const data = response.data.coins;
+    console.log(data[0])
  
  
     return {
