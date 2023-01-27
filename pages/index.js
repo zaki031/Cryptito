@@ -114,7 +114,7 @@ export default function Home() {
       <th>Price</th>
       <th>Market Cap</th>
     </tr>
-    <hr class="h-px my-8 w-[10000px] bg-white border-0 "/>
+    <hr class="h-px overflow-hidden	 my-8 w-[10000px] bg-white border-0 "/>
 
   </thead>
   <tbody>
@@ -124,7 +124,7 @@ export default function Home() {
       <td>Malcolm Lockyer</td>
       <td>1961</td>
     </tr >
-    <hr class="h-px my-8 w-[10000px] bg-white border-0 "/>
+    <hr class="h-px overflow-hidden	 my-8 w-[10000px] bg-white border-0 "/>
 
 
   </tbody>
