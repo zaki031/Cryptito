@@ -106,7 +106,7 @@ export default function Home() {
               <table class="table-fixed bg-transparent text-dark_bg w-full align-center place-center justify-center">
   <thead>
     <br />
-    <hr class="h-px my-8 w-[10000px] bg-gray-200 border-0 dark:bg-gray-700"/>
+    <hr class="h-px my-8 w-[10000px] bg-white border-0"/>
 
     <tr>
       <th></th>
@@ -114,7 +114,7 @@ export default function Home() {
       <th>Price</th>
       <th>Market Cap</th>
     </tr>
-    <hr class="h-px my-8 w-[10000px] bg-gray-200 border-0 dark:bg-gray-700"/>
+    <hr class="h-px my-8 w-[10000px] bg-white border-0 "/>
 
   </thead>
   <tbody>
@@ -124,7 +124,7 @@ export default function Home() {
       <td>Malcolm Lockyer</td>
       <td>1961</td>
     </tr >
-    <hr class="h-px my-8 w-[10000px] bg-gray-200 border-0 dark:bg-gray-700"/>
+    <hr class="h-px my-8 w-[10000px] bg-white border-0 "/>
 
 
   </tbody>
