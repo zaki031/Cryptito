@@ -4,6 +4,7 @@ import axios from "axios";
 
 const coin = ({ data }) => {
     const [coins,SetCoins] = useState([])
+    const [names, setNames] = useState([])
     return ( 
         useEffect(()=>{
            
@@ -11,7 +12,11 @@ const coin = ({ data }) => {
         },[]),
         <>
         <Navbar/>
-        <h4>{data[0].id}</h4>
+        {
+           data.map((item)=>{
+            return <h4>{item.id}</h4>;
+        })
+        }
 
 
 
