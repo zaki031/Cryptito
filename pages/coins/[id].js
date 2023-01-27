@@ -1,6 +1,7 @@
 import Navbar from "../../components/navbar";
 import Image from "next/image";
-const coin = () => {
+import axios from "axios";
+const coin = ({ data }) => {
   return (
     <div className="h-[100vh] ">
       <Navbar />
@@ -9,17 +10,17 @@ const coin = () => {
           <div className="flex title">
             <Image
               src={
-                "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
+                data.image.large
               }
               width={"100"}
               height={"100"}
             />
-            <h1 className="ml-3 text-[70px]">Bitcoin</h1>
+            <h1 className="ml-3 text-[70px]">{data.name}</h1>
             <h4 className="h-6 px-3 mt-2 rounded-md text-light_bg bg-dark_bg">
-              BTC
+              {data.symbol}
             </h4>
           </div>
-          <h1 className=" mr-[100px] text-[70px] font-bold">$22,955.44</h1>
+          <h1 className=" mr-[100px] text-[70px] font-bold">${data.market_data.current_price.usd}</h1>
 
         </div>
         
@@ -29,3 +30,25 @@ const coin = () => {
 };
 
 export default coin;
+
+
+
+
+
+export async function getServerSideProps({ params }) {
+  const { id } = params;
+ 
+  const response = await axios.get(
+    `https://api.coingecko.com/api/v3/coins/${id}`
+  );
+  const data = response.data;
+  console.log(data.market_data.current_price.aed)
+
+  return {
+    props: {
+      key: id,
+      data,
+      
+    },
+  };
+}
