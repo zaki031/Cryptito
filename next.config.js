@@ -10,6 +10,10 @@ const nextConfig = {
       hostname:'assets.coingecko.com',
 
       },
+     {
+      protocol:'https',
+      hostname:'assets8.lottiefiles.com',
+     }
     
     ],
     minimumCacheTTL:1500000,
