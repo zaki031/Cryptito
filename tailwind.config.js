@@ -10,6 +10,7 @@ module.exports = {
         'light_bg': '#F6F9FC',
         'dark_bg':'#0A2540',
         'main_color':'#73e4fd',
+        'hover_dark':'#183d62',
         'nigg':'#c3c5f8',
       },
       backgroundImage: {

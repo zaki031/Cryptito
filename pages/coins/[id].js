@@ -12,11 +12,11 @@ const coin = ({ data }) => {
               src={
                 data.image.large
               }
-              width={"100"}
-              height={"100"}
+              width={"150"}
+              height={"50"}
             />
-            <h1 className="ml-3 text-[70px]">{data.name}</h1>
-            <h4 className="h-6 px-3 mt-2 rounded-md text-light_bg bg-dark_bg">
+            <h1 className="ml-3 margin-auto text-[70px]">{data.name}</h1>
+            <h4 className="h-6 px-3 margin-auto  mt-2 rounded-md text-light_bg bg-dark_bg">
               {data.symbol}
             </h4>
             
@@ -31,8 +31,8 @@ const coin = ({ data }) => {
           </div>
 
         </div>
-        <div className="links ">
-            <a className="bg-dark_bg rounded-md text-white p-3" href="bitcoin.org">bitcoin.org</a>
+        <div className="links mt-5 ">
+            <a className="bg-dark_bg transition-[2s] hover:bg-hover_dark rounded-md text-white p-3" href={data.links.homepage[0]}>{data.links.homepage[0].replace('http://www.|_/https://www.','')}</a>
 
             </div>
         
@@ -54,7 +54,8 @@ export async function getServerSideProps({ params }) {
     `https://api.coingecko.com/api/v3/coins/${id}`
   );
   const data = response.data;
-  console.log(data.market_data.current_price.aed)
+  const nigger = data.links.homepage[0]
+  console.log(nigger.replace('http://www.',''))
 
   return {
     props: {
