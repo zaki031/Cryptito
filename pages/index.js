@@ -1,4 +1,5 @@
 import bg from "../public/bg.jpg";
+
 import {
   Link,
   Button,
@@ -9,6 +10,8 @@ import {
   scroller,
 } from "react-scroll";
 import pic from "../public/pic.gif";
+import sec_pic from "../public/pic.png";
+
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import axios from "axios";
@@ -24,14 +27,14 @@ export default function Home() {
   const [coins, SetCoins] = useState([]);
 
   return (
-    useEffect(() => {
-      
-    
-      
-    }, []),
+    useEffect(() => {}, []),
     (
-      <>
+      <div className="bg-light_bg">
         <Head>
+          <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+          />
           <title>Cryptito</title>
         </Head>
         <Navbar />
@@ -65,78 +68,30 @@ export default function Home() {
             <Image src={pic} width="800" height="100" className="z-50 h-55" />
           </div>
         </div>
-
-        <div className="prices-container bg-hero -z-50">
-          <div className="custom-shape-divider-bottom-1673602727 -z-50 ">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                className="shape-fill fill-light_bg"
-              ></path>
-            </svg>
-          </div>
-          <div className="w-full h-[100vh] justify-center text-center prices">
-            <h1 className="text-5xl font-thin text-dark_bg ">
-              Popular crypto currencies prices
-            </h1>
-
-            <div className="h-[100vh] currencies_container bg-hero">
-              <div className="text-center input ">
-                <a
-                  href={`/search/${search}`}
-                  className="p-1 mr-2 text-white rounded bg-dark_bg"
-                >
-                  Search
-                </a>
-
-                <input
-                  value={search}
-                  onChange={(event) => SetSearch(event.target.value)}
-                  type="text"
-                  className="w-[500px] rounded mt-[100px] text-center"
-                  placeholder="Search any crypto currency"
-                />
-              </div>
-              <div className="items-center justify-center coins">
-              <table class="table-fixed bg-transparent text-dark_bg w-full align-center place-center justify-center">
-  <thead>
-    <br />
-    <hr class="h-px my-8 w-[10000px] bg-white border-0"/>
-
-    <tr>
-      <th></th>
-      <th>Coin</th>
-      <th>Price</th>
-      <th>Market Cap</th>
-    </tr>
-    <hr class="h-px overflow-hidden	 my-8 w-[10000px] bg-white border-0 "/>
-
-  </thead>
-  <tbody>
-    <tr>
-      <td></td>
-      <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-      <td>Malcolm Lockyer</td>
-      <td>1961</td>
-    </tr >
-    <hr class="h-px overflow-hidden	 my-8 w-[10000px] bg-white border-0 "/>
-
-
-  </tbody>
-</table>
+        <div className="trend-   flex bg-dark_bg "> 
+          <div className="trend bg-hero  h-[650px] ">
+            <div className="tswira h-85">
+              <Image
+                src={sec_pic}
+                width="800"
+                height="100"
+                className="z-50 h-55"
+              />
+            </div>
+            </div>
+            <div className="text-center w-[50%]  ">
+              <div className="trending mt-[80px] rounded-md m-auto bg-light_bg w-[400px] h-[500px] p-4">
+                <div className="hightlight text-black flex justify-between">
+                  <h1>🔥 Trending</h1>
+                  <a href="">
+                    see more <i class="uil uil-angle-right-b"></i>
+                  </a>
+                </div>
+                
               </div>
             </div>
-
-            <br />
-            <br />
-          </div>
         </div>
-      </>
+      </div>
     )
   );
 }

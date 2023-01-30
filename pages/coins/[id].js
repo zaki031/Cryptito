@@ -1,7 +1,9 @@
 import Navbar from "../../components/navbar";
 import Image from "next/image";
 import axios from "axios";
+import { useState } from "react";
 const coin = ({ data }) => {
+  const [website,SetWebsite] = useState('')
   return (
     <div className="h-[100vh] ">
       <Navbar />
