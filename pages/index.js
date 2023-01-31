@@ -31,7 +31,7 @@ export default function Home() {
   return (
     useEffect(() => {}, []),
     (
-      <div className="bg-light_bg">
+      <div className="bg-white">
         <Head>
           <link
             rel="stylesheet"
@@ -41,7 +41,7 @@ export default function Home() {
         </Head>
         <Navbar />
 
-        <div className="flex justify-between  text-white h-[90vh] landing bg-light_bg">
+        <div className="flex justify-between  text-white h-[90vh] landing bg-white">
           <div className="mt-[150px] txt">
             <h1 className="mx-20 font-semibold text-9xl text-dark_bg">
               Cryptito
@@ -70,7 +70,7 @@ export default function Home() {
             </div>
           </div>
           <div className="tswira h-85">
-            <Image src={pic} width="800" height="100" className="z-50 h-55" />
+            <Image src={pic} width="600" height="50" className="z-50 h-55" />
           </div>
         </div>
       
