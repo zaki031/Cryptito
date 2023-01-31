@@ -62,6 +62,7 @@ export default function Home() {
                 >
                   Github repo <i className="uil uil-arrow-up-right"></i>
                 </a>
+                
               </div>
             </div>
           </div>
