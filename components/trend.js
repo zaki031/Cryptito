@@ -39,16 +39,16 @@ const trend = () => {
                     return(
                         <div className="coin mb-2 mt-2 flex justify-between">
                             <Image src={item.item.small} width={30} height={30}></Image>
-                            <div className="name w-full">
+                            <div className="name flex justify-evenly w-full">
                                                                                             <h2>{item.item.id}</h2>
-
-                            </div>
-                            <div className="symbol text-center ">
+<div className="symbol text-center   ">
                                                                                             <p className="bg-dark_bg rounded-md px-2 text-white">{item.item.symbol}</p>
 
                             </div>
+                            </div>
+                            
 
-                            <a className="hover:bg-dark_bg rounded-[50%]" href={`/coins/${item.item.id}`}>
+                            <a className="hover:bg-dark_bg p-1 transition-[0.5s] hover:text-white rounded-[50%]" href={`/coins/${item.item.id}`}>
                <i class="uil uil-angle-right-b"></i>
               </a>
 
