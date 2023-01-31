@@ -34,7 +34,7 @@ const trend = () => {
               <h1>🔥 Trending</h1>
               
             </div>
-            <div className="coins mt-[50px]">
+            <div className="coins mt-[30px]">
                 {trend_coins.map((item)=>{
                     return(
                         <div className="coin mb-2 mt-2 flex justify-between">

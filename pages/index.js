@@ -14,6 +14,7 @@ import pic from "../public/pic.gif";
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import Trend from "../components/trend";
+import { Link as LinkS } from "react-scroll";
 
 import axios from "axios";
 import btc from "../public/bitcoin.svg";
@@ -51,9 +52,11 @@ export default function Home() {
 
             <div className="flex mx-20  mt-10 gap-[80px] bh-w ">
               <div className="">
-                <button className="text-md py-5 px-[80px] text-dark_bg  see_more rounded-xl bg-main_color">
+                <LinkS smooth={true} to="trend" className="text-md py-5 px-[80px] text-dark_bg  see_more rounded-xl bg-main_color">
                   See more <i className="uil uil-arrow-down"></i>
-                </button>
+
+                </LinkS>
+              
               </div>
               <div className="mt-[20px]">
                 <a
@@ -71,7 +74,7 @@ export default function Home() {
           </div>
         </div>
       
-        <Trend/>
+        <Trend name="trend" />
       </div>
     )
   );
