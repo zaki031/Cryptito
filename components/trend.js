@@ -29,7 +29,7 @@ const trend = () => {
           </div>
         </div>
         <div className="text-center w-[50%]  ">
-          <div className="trending mt-[125px] rounded-md m-auto bg-light_bg w-[400px] h-[400px] p-4">
+          <div className="trending mt-[125px] rounded-md m-auto bg-light_bg w-[400px]  p-4">
             <div className="hightlight text-black flex justify-between">
               <h1>🔥 Trending</h1>
               
@@ -48,7 +48,7 @@ const trend = () => {
                             </div>
                             
 
-                            <a className="hover:bg-dark_bg p-1 transition-[0.5s] hover:text-white rounded-[50%]" href={`/coins/${item.item.id}`}>
+                            <a className="hover:bg-dark_bg p-2 transition-[0.5s] hover:text-white rounded-[50%]" href={`/coins/${item.item.id}`}>
                <i class="uil uil-angle-right-b"></i>
               </a>
 

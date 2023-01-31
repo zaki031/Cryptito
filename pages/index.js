@@ -51,9 +51,9 @@ export default function Home() {
             </p>
 
             <div className="flex mx-20  mt-10 gap-[80px] bh-w ">
-              <div className="">
-                <LinkS smooth={true} to="trend" className="text-md py-5 px-[80px] text-dark_bg  see_more rounded-xl bg-main_color">
-                  See more <i className="uil uil-arrow-down"></i>
+              <div className="mt-[20px]">
+                <LinkS smooth={true} to="trend" className="text-md py-5 hover:bg-brighter_main  px-[80px] text-dark_bg  see_more rounded-xl bg-main_color">
+                  See more <i className="uil uil-arrow-down "></i>
 
                 </LinkS>
               
