@@ -17,7 +17,7 @@ const trend = () => {
 
   return (
     <>
-      <div className="trend-   flex bg-dark_bg ">
+      <div className="trend sm:block  w-full  lg:flex bg-dark_bg ">
         <div className="trend bg-dark_bg  h-[650px] ">
           <div className="tswira h-85">
             <Image
@@ -28,7 +28,7 @@ const trend = () => {
             />
           </div>
         </div>
-        <div className="text-center w-[50%]  ">
+        <div className="text-center lg:w-[50%] sm:w-full  ">
           <div className="trending mt-[125px] rounded-md m-auto bg-light_bg w-[400px]  p-4">
             <div className="hightlight text-black flex justify-between">
               <h1>🔥 Trending</h1>
