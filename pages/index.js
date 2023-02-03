@@ -10,7 +10,7 @@ import {
   scroller,
 } from "react-scroll";
 import pic from "../public/pic.gif";
-
+import Coins from '../components/coins'
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import Trend from "../components/trend";
@@ -51,7 +51,7 @@ export default function Home() {
             </p>
 
             <div className="lg:flex sm:block  mx-20  mt-10 gap-[80px] bh-w ">
-              <div className="mt-[20px] gap-[10px] flex  w-[200px] ">
+              <div className="mt-[20px]  flex justify-between  w-full ">
                 <LinkS
                   smooth={true}
                   to="trend"
@@ -68,12 +68,20 @@ export default function Home() {
               
             </div>
           </div>
-          <div className="tswira  h-85">
+          <div className="tswira   h-85">
             <Image src={pic} width="600" height="50" className="z-50  h-55" />
           </div>
         </div>
 
+        <div class="custom-shape-divider-top-1675418296">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill fill-main_color"></path>
+    </svg>
+</div>
+
         <Trend name="trend" />
+
+        <Coins/>
       </div>
     )
   );
