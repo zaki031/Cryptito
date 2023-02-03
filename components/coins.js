@@ -20,6 +20,7 @@ const coins = () => {
   }, []);
   return (
     <div className="h-full text-center justify-center  bg-dark_bg">
+
       <div class="custom-shape-divider-top-1675418067">
         <svg
           data-name="Layer 1"
@@ -32,21 +33,72 @@ const coins = () => {
             class="shape-fill fill-main_color"
           ></path>
         </svg>
+
       </div>
-      <div className="coins_container w-[50%] p-4 rounded-xl m-auto bg-light_bg ">
+      <h1 className="text-6xl text-light_bg">Top Market Cap value coins</h1>
+      <br /><br /><br />
+       
+      <div className="hh text-left mb-[20px] text-2xl justify-evenly rounded-xl py-2 w-[80%] m-auto text-dark_bg bg-light_bg flex gap-[100px] ">
+              <div className="rank  text-left ">
+              <h3>#</h3>
+
+              </div>
+              <div className="name text-left">
+              <h3>Coin</h3>
+
+              </div>
+
+              <div className="price text-left">
+              <h3>price in usd</h3>
+              </div>
+              <div className="percentage  text-left">
+                <h3>24%</h3>
+              </div>
+              <div className="marketcap text-left">
+               <h3>Market Cap</h3>
+
+              </div>
+              {/* 
+              <td className="">{item.current_price}$</td>
+                
+               */}
+</div>
+
+      <div className="coins_container w-[80%] p-4 rounded-xl m-auto bg-light_bg ">
+       
      
 
     
     {coins.map((item) => {
           return (
 
-            <div className="hh text-center mb-[20px] text-2xl justify-evenly text-dark_bg flex gap-4 ">
+
+           
+           <div className="hh text-left mb-[20px] text-2xl justify-evenly text-dark_bg flex gap-4 ">
+              <div className="rank w-[30px] text-left ">
               <td className="">{item.market_cap_rank}</td>
+
+              </div>
               <td><Image src={item.image} width="30" height="20"></Image></td>
+              <div className="name w-[200px] text-left">
               <td className="" href="">{item.id}</td>
+
+              </div>
+
+              <div className="price w-[120px] text-left">
               <td className="">{item.current_price}$</td>
-              {item.price_change_percentage_24h>0?<h2 className="p-2  bg-green-500 text-white rounded-xl"><i class="uil uil-angle-up"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>:<h2 className="p-3 bg-red-500 text-white rounded-xl"><i class="uil uil-angle-down"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>}
-                          <td className="">{item.market_cap}$</td>
+              </div>
+              <div className="percentage text-white w-[150px] text-center mb-[15px] ">
+              {item.price_change_percentage_24h>0?<a className="w-full  p-2 text-center  bg-green-500  rounded-xl"><i class="uil uil-angle-up"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</a>:<h2 className="p-2 bg-red-500   rounded-xl"><i class="uil uil-angle-down"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>}
+              </div>
+              <div className="marketcap w-[100px]">
+                <td className="">{item.market_cap}$</td>
+
+              </div>
+              {/* 
+              <td className="">{item.current_price}$</td>
+                
+               */}
 </div>
 
           );
