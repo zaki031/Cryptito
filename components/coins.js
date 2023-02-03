@@ -40,12 +40,12 @@ const coins = () => {
     {coins.map((item) => {
           return (
 
-            <div className="hh text-center mb-[20px] text-xl justify-evenly text-dark_bg flex gap-4 ">
+            <div className="hh text-center mb-[20px] text-2xl justify-evenly text-dark_bg flex gap-4 ">
               <td className="">{item.market_cap_rank}</td>
               <td><Image src={item.image} width="30" height="20"></Image></td>
               <td className="" href="">{item.id}</td>
               <td className="">{item.current_price}$</td>
-              {item.price_change_percentage_24h<0?<h2 className="p-2  bg-green-500 text-white rounded-xl"><i class="uil uil-angle-up"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>:<h2 className="p-3 bg-red-500 text-white rounded-xl"><i class="uil uil-angle-down"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>}
+              {item.price_change_percentage_24h>0?<h2 className="p-2  bg-green-500 text-white rounded-xl"><i class="uil uil-angle-up"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>:<h2 className="p-3 bg-red-500 text-white rounded-xl"><i class="uil uil-angle-down"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>}
                           <td className="">{item.market_cap}$</td>
 </div>
 
