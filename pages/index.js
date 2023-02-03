@@ -26,7 +26,6 @@ import { useState } from "react";
 
 export default function Home() {
   const [search, SetSearch] = useState("");
-  const [coins, SetCoins] = useState([]);
 
   return (
     useEffect(() => {}, []),
