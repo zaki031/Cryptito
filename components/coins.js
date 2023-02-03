@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Image from "next/image";
 
 const coins = () => {
   const [coins, SetCoins] = useState([]);
@@ -32,15 +33,16 @@ const coins = () => {
           ></path>
         </svg>
       </div>
-      <div className="coins_container justify-center">
+      <div className="coins_container bg-light_bg  justify-center">
         {coins.map((item) => {
           return (
-            <div className="hh text-center mb-[20px] flex gap-4 text-white">
+            <div className="hh text-center mb-[20px] text-dark_bg flex gap-4 ">
               <h3>{item.market_cap_rank}</h3>
+              <Image src={item.image} width={30} height={20}></Image>
               <a href="">{item.id}</a>
               <h4>{item.current_price}$</h4>
               <h4>{item.market_cap}$</h4>
-              {item.price_change_percentage_24h<0?<h2 className="p-2  bg-green-500 rounded-xl"><i class="uil uil-angle-up"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>:<h2 className="p-3 bg-red-500 rounded-xl"><i class="uil uil-angle-down"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>}
+              {item.price_change_percentage_24h<0?<h2 className="p-2  bg-green-500 text-white rounded-xl"><i class="uil uil-angle-up"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>:<h2 className="p-3 bg-red-500 text-white rounded-xl"><i class="uil uil-angle-down"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>}
             </div>
           );
         })}
