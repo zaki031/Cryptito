@@ -19,7 +19,7 @@ const coins = () => {
       });
   }, []);
   return (
-    <div className="h-full  bg-dark_bg">
+    <div className="h-full text-center justify-center  bg-dark_bg">
       <div class="custom-shape-divider-top-1675418067">
         <svg
           data-name="Layer 1"
@@ -33,19 +33,28 @@ const coins = () => {
           ></path>
         </svg>
       </div>
-      <div className="coins_container bg-light_bg  justify-center">
-        {coins.map((item) => {
+      <div className="coins_container w-[50%] p-4 rounded-xl m-auto bg-light_bg ">
+     
+
+    
+    {coins.map((item) => {
           return (
-            <div className="hh text-center mb-[20px] text-dark_bg flex gap-4 ">
-              <h3>{item.market_cap_rank}</h3>
-              <Image src={item.image} width={30} height={20}></Image>
-              <a href="">{item.id}</a>
-              <h4>{item.current_price}$</h4>
-              <h4>{item.market_cap}$</h4>
+
+            <div className="hh text-center mb-[20px] text-xl justify-evenly text-dark_bg flex gap-4 ">
+              <td className="">{item.market_cap_rank}</td>
+              <td><Image src={item.image} width="30" height="20"></Image></td>
+              <td className="" href="">{item.id}</td>
+              <td className="">{item.current_price}$</td>
               {item.price_change_percentage_24h<0?<h2 className="p-2  bg-green-500 text-white rounded-xl"><i class="uil uil-angle-up"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>:<h2 className="p-3 bg-red-500 text-white rounded-xl"><i class="uil uil-angle-down"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>}
-            </div>
+                          <td className="">{item.market_cap}$</td>
+</div>
+
           );
         })}
+      
+   
+
+        
       </div>
     </div>
   );
