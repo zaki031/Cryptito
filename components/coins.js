@@ -19,7 +19,7 @@ const coins = () => {
       });
   }, []);
   return (
-    <div className="h-full text-center justify-center  bg-dark_bg">
+    <div className="h-full text-center justify-center pb-[200px]  bg-dark_bg">
 
       <div class="custom-shape-divider-top-1675418067">
         <svg
@@ -38,23 +38,23 @@ const coins = () => {
       <h1 className="text-6xl text-light_bg">Top Market Cap value coins</h1>
       <br /><br /><br />
        
-      <div className="hh text-left mb-[20px] text-2xl justify-evenly rounded-xl py-2 w-[80%] m-auto text-dark_bg bg-light_bg flex gap-[100px] ">
-              <div className="rank  text-left ">
+      <div className="hh text-left mb-[20px] text-2xl rounded-xl py-2 w-[80%] m-auto text-dark_bg bg-light_bg flex gap-[100px] ">
+              <div className="rank ml-[100px]  text-center">
               <h3>#</h3>
 
               </div>
-              <div className="name text-left">
+              <div className="name ml-[150px]  text-center">
               <h3>Coin</h3>
 
               </div>
 
-              <div className="price text-left">
-              <h3>price in usd</h3>
+              <div className="price ml-[60px] text-center">
+              <h3>Price</h3>
               </div>
-              <div className="percentage  text-left">
+              <div className="percentage  ml-[100px]    text-center">
                 <h3>24%</h3>
               </div>
-              <div className="marketcap text-left">
+              <div className="marketcap ml-[50px] text-center">
                <h3>Market Cap</h3>
 
               </div>
@@ -64,7 +64,7 @@ const coins = () => {
                */}
 </div>
 
-      <div className="coins_container w-[80%] p-4 rounded-xl m-auto bg-light_bg ">
+      <div className="coins_container w-[80%] p-4  rounded-xl m-auto bg-light_bg ">
        
      
 
@@ -80,12 +80,12 @@ const coins = () => {
 
               </div>
               <td><Image src={item.image} width="30" height="20"></Image></td>
-              <div className="name w-[200px] text-left">
+              <div className="name w-[100px] text-left">
               <td className="" href="">{item.id}</td>
 
               </div>
 
-              <div className="price w-[120px] text-left">
+              <div className="price w-[100px] text-left">
               <td className="">{item.current_price}$</td>
               </div>
               <div className="percentage text-white w-[150px] text-center mb-[15px] ">
