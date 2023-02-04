@@ -28,14 +28,14 @@ const trend = () => {
           </div>
         </div>
         <div className="text-center bg-main_color my-auto  rounded-md  lg:w-[50%] sm:m-6:w-full  ">
-          <div className="trending mt-[5px]  rounded-md m-auto bg-white lg:w-[400px] sm:w-[200px] p-4">
+          <div className="trending mt-[5px]  rounded-md h-[500px] m-auto bg-white lg:w-[400px] sm:w-[200px] p-4">
             <div className="hightlight text-black flex justify-between">
               <h1>🔥 Trending</h1>
             </div>
-            <div className="coins mt-[30px]">
+            <div className="coins mt-[40px]">
               {trend_coins.map((item) => {
                 return (
-                  <div className="coin mb-2 mt-2 p-2 rounded-xl flex hover:p-4 bg-light_bg gap-[30px] justify-evenly">
+                  <div className="coin mb-2 mt-2 p-2 rounded-xl hover:shadow-md flex hover:p-2.5 transition-[.5s] bg-light_bg gap-[30px] justify-evenly">
                     <Image src={item.item.small} width={30} height={30}></Image>
                     <div className="name flex w-full text-left   ">
                         <div className="name_coin  w-[200px] ">
