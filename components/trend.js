@@ -48,7 +48,7 @@ const trend = () => {
                         height={30}
                       ></Image>
                       <div className="name flex w-full text-left   ">
-                        <div className="name_coin  w-[200px] ">
+                        <div className="name_coin  w-[150px] ">
                           <h2>{item.item.id}</h2>
                         </div>
                         <div className="symbol text-center   ">
@@ -56,6 +56,10 @@ const trend = () => {
                             {item.item.symbol}
                           </p>
                         </div>
+                      </div>
+                      <div className="arrow">
+                                              <i class="uil uil-angle-right-b"></i>
+
                       </div>
                     </div>
                     </a>

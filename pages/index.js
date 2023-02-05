@@ -54,7 +54,7 @@ export default function Home() {
                 <LinkS
                   smooth={true}
                   to="trend"
-                  className="text-md py-5   hover:bg-brighter_main  lg:px-[80px] sm:px-[40px] text-dark_bg  see_more rounded-xl bg-main_color"
+                  className="text-md py-5 cursor-pointer  hover:bg-brighter_main  lg:px-[80px] sm:px-[40px] text-dark_bg  see_more rounded-xl bg-main_color"
                 >
                   See more <i className="uil uil-arrow-down "></i>
                 </LinkS>
