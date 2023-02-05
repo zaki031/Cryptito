@@ -89,7 +89,7 @@ const coins = () => {
               <td className="">{item.current_price}$</td>
               </div>
               <div className="percentage text-white w-[150px] text-center mb-[15px] ">
-              {item.price_change_percentage_24h>0?<a className="w-full  p-2 text-center  bg-green-500  rounded-xl"><i class="uil uil-angle-up"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</a>:<h2 className="p-2 bg-red-500   rounded-xl"><i class="uil uil-angle-down"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>}
+              {item.price_change_percentage_24h>0?<a className=" w-[10rem]  text-center  text-green-500  "><i class="uil uil-angle-up"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</a>:<h2 className=" text-red-500 w-[10rem] text-center"><i class="uil uil-angle-down"></i> {Math.round(item.price_change_percentage_24h * 100) / 100}%</h2>}
               </div>
               <div className="marketcap w-[100px]">
                 <td className="">{item.market_cap}$</td>
