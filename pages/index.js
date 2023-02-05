@@ -15,7 +15,7 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import Trend from "../components/trend";
 import { Link as LinkS } from "react-scroll";
-
+import Footer from "../components/footer"
 import axios from "axios";
 import btc from "../public/bitcoin.svg";
 import eth from "../public/eth.svg";
@@ -42,7 +42,7 @@ export default function Home() {
 
         <div className="flex justify-between  text-white h-[90vh] landing bg-white">
           <div className="mt-[150px]   txt">
-            <h1 className="mx-20 font-semibold text-5xl text-dark_bg">
+            <h1 className="mx-20 font-semibold lg:text-9xl sm:text-5xl text-dark_bg">
               Cryptito
             </h1>
             <p className="mx-20  mt-10 text-3xl text-dark_bg">
@@ -72,16 +72,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div class="custom-shape-divider-top-1675418296">
+        <div class="custom-shape-divider-top-1675418296 ">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill fill-main_color"></path>
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill fill-main_color "></path>
     </svg>
 </div>
 
         <Trend name="trend" />
 
         <Coins/>
+        <Footer/>
       </div>
+
     )
   );
 }
