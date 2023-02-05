@@ -26,9 +26,9 @@ import { useState } from "react";
 
 export default function Home() {
   const [search, SetSearch] = useState("");
-
+  
   return (
-    useEffect(() => {}, []),
+  
     (
       <div className="bg-white w-full">
         <Head>
