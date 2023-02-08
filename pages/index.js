@@ -26,6 +26,12 @@ import { useState } from "react";
 
 export default function Home() {
   const [search, SetSearch] = useState("");
+  var Scroll = require('react-scroll');
+  var scroll = Scroll.animateScroll;
+  const dmm =()=>{
+    scroll.scrollToTop()
+   }
+  
   
   return (
   
@@ -38,9 +44,9 @@ export default function Home() {
           />
           <title>Cryptito</title>
         </Head>
-        <Navbar />
+        <Navbar name="navbar"/>
 
-        <div className="lg:flex justify-between  text-white h-[90vh] landing bg-white">
+        <div className="lg:flex justify-between  text-white h-[90vh] landing bg-white" name="top">
           <div className="mt-[150px]   txt">
             <h1 className="mx-20 font-semibold lg:text-9xl sm:text-5xl text-dark_bg">
               Cryptito
@@ -79,6 +85,9 @@ export default function Home() {
 </div>
 
         <Trend name="trend" />
+        <button className="fixed right-4 bottom-4  text-white text-3xl rounded-[50%] p-3 bg-dark_bg" onClick={dmm}>
+        <i class="uil uil-arrow-up"></i>
+        </button>
 
         <Coins/>
         <Footer/>
