@@ -40,7 +40,7 @@ export default function Home() {
         </Head>
         <Navbar />
 
-        <div className="flex justify-between  text-white h-[90vh] landing bg-white">
+        <div className="lg:flex justify-between  text-white h-[90vh] landing bg-white">
           <div className="mt-[150px]   txt">
             <h1 className="mx-20 font-semibold lg:text-9xl sm:text-5xl text-dark_bg">
               Cryptito
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           </div>
           <div className="tswira   h-85">
-            <Image src={pic} width="600" height="50" className="z-50  h-55" />
+            <Image src={pic} width="600" height="50" className="z-50   h-55" />
           </div>
         </div>
 

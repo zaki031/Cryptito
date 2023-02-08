@@ -39,48 +39,42 @@ const coins = () => {
       <br />
 
       <div className="hh  mb-[20px] text-2xl rounded-xl justify-evenly py-2 w-[80%] m-auto text-dark_bg bg-light_bg flex gap-[100px] ">
-        <div className="rank w-[30px] ml-[70px] text-left ">
+        <div className="rank lg:w-[30px] lg:ml-[70px] text-left ">
           <td className="">#</td>
         </div>
         <td></td>
-        <div className="name w-[50px] text-left">
+        <div className="name lg:w-[50px] text-left">
           <td className="" href="">
             Coin
           </td>
         </div>
-        <div className="price w-[120px] text-left">
-          <td className="">Price</td>
-        </div>
-        <div className="percentage w-[150px] text-center flex  items center  justify-between mb-[15px] ">24h%</div>
-        <div className="marketcap w-[100px]">
-          <td className=" mr-[100px]">Market Cap</td>
-        </div>
+      
       </div>
 
-      <div className="coins_container max-w-[80%] p-4  rounded-xl m-auto bg-light_bg ">
+      <div className="coins_container max-w-[80%] p-4  text-sm rounded-xl m-auto bg-light_bg ">
         {coins.map((item) => {
           return (
             <div className="coins_container"><a href={`/coins/${item.id}`}>
-                <div className="hh text-left mb-[20px] text-2xl justify-evenly hover:bg-gray-100 pt-2  rounded-xl text-dark_bg flex gap-4 ">
-              <div className="rank w-[30px] text-left ">
+                <div className="hh text-left mb-[20px] lg:text-2xl justify-evenly hover:bg-gray-100 pt-2  rounded-xl text-dark_bg flex gap-4 ">
+              <div className="rank lg:w-[30px] text-left ">
                 <td className="">{item.market_cap_rank}</td>
               </div>
               <td>
                 <Image src={item.image} width="30" height="20"></Image>
               </td>
-              <div className="name w-[100px] text-left">
+              <div className="name lg:w-[100px] text-left">
                 <td className="" href="">
                   {item.id}
                 </td>
               </div>
 
-              <div className="price w-[100px] text-left">
+              <div className="price lg:w-[100px] text-left">
                 <td className="">{item.current_price}$</td>
               </div>
               <div className="percentage text-white w-[150px] text-center flex  items center  justify-between mb-[15px] ">
                 {item.price_change_percentage_24h > 0 ? (
                   <div className="day">
-                    <a className=" w-[10rem]  text-center  text-green-500  ">
+                    <a className=" lg:w-[10rem]  text-center  text-green-500  ">
                       <i class="uil uil-angle-up"></i>{" "}
                       {Math.round(item.price_change_percentage_24h * 100) / 100}
                       %
@@ -88,7 +82,7 @@ const coins = () => {
                   </div>
                 ) : (
                   <div className="day">
-                    <a className=" text-red-500 w-[10rem] text-center">
+                    <a className=" text-red-500 lg:w-[10rem] text-center">
                       <i class="uil uil-angle-down"></i>{" "}
                       {Math.round(item.price_change_percentage_24h * 100) / 100}
                       %
@@ -96,7 +90,7 @@ const coins = () => {
                   </div>
                 )}
               </div>
-              <div className="marketcap w-[100px]">
+              <div className="marketcap lg:w-[100px]">
                 <td className="">{item.market_cap}$</td>
               </div>
               {/* 
