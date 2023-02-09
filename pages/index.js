@@ -48,23 +48,23 @@ export default function Home() {
 
         <div className="lg:flex justify-between  text-white h-[90vh] landing bg-white" name="top">
           <div className="mt-[150px]   txt">
-            <h1 className="mx-20 font-semibold lg:text-9xl sm:text-[5rem] text-dark_bg">
+            <h1 className="mx-10 font-semibold text-7xl  text-dark_bg">
               Cryptito
             </h1>
-            <p className="mx-20  mt-10 text-3xl text-dark_bg">
+            <p className="mx-10  mt-10 text-3xl text-dark_bg">
               For live crypto currency news and prices
             </p>
 
             <div className="lg:flex sm:block  mx-20  mt-10 gap-[80px] bh-w ">
-              <div className="mt-[20px]  flex justify-between  w-full ">
+              <div className="mt-[20px]  mx-[-40px] flex justify-between  lg:w-[500px] ">
                 <LinkS
                   smooth={true}
                   to="trend"
-                  className="text-md py-5 cursor-pointer px-2  hover:bg-brighter_main  lg:px-[80px] sm:px-[40px] text-dark_bg  see_more rounded-xl bg-main_color"
+                  className="text-md py-5 cursor-pointer px-4  hover:bg-brighter_main  lg:px-[80px] sm:px-[40px] text-dark_bg  see_more rounded-xl bg-main_color"
                 >
                   See more <i className="uil uil-arrow-down "></i>
                 </LinkS>
-                <a className="text-md py-4 hover:bg-dark_bg px-2 border-4 hover:text-light_bg lg:px-[50px] sm:px-[30px] text-dark_bg  see_more rounded-xl border-dark_bg bg-transparent" href="">
+                <a className="text-md py-4 hover:bg-dark_bg px-4 border-4 hover:text-light_bg lg:px-[50px] sm:px-[30px] text-dark_bg  see_more rounded-xl border-dark_bg bg-transparent" href="">
                 Github repo
               </a>
               </div>

@@ -29,7 +29,7 @@ const trend = () => {
           </div>
         </div>
         <div className="text-center bg-main_color my-auto  rounded-md pb-[40px] p-4 lg:w-[50%] sm:m-6:w-full  ">
-          <div className="trending mt-[5px]  rounded-md h-[500px] m-auto bg-white  lg:max-w-[400px] sm:max-w-[200px] p-4">
+          <div className="trending mt-[5px]  rounded-md  m-auto bg-white  lg:max-w-[400px] sm:max-w-[200px] p-4">
             <div className="hightlight text-black flex justify-between">
               <h1 className="text-2xl">🔥 Trending</h1>
             </div>

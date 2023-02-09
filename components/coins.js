@@ -33,7 +33,7 @@ const coins = () => {
           ></path>
         </svg>
       </div>
-      <h1 className="text-6xl text-light_bg">Top Market Cap value coins</h1>
+      <h1 className="lg:text-6xl sm:text-5xl text-light_bg">Top Market Cap value coins</h1>
       <br />
       <br />
       <br />
@@ -56,7 +56,7 @@ const coins = () => {
           return (
             <div className="coins_container overflow-auto"><a href={`/coins/${item.id}`}>
                 <div className="hh text-left scroll-m-1 mb-[20px] lg:text-2xl justify-evenly hover:bg-gray-100 pt-2  rounded-xl text-dark_bg flex gap-4 ">
-              <div className="rank w-[30px] hidden  text-left ">
+              <div className="rank w-[30px] text-left ">
                 <td className="">{item.market_cap_rank}</td>
               </div>
               <td>
@@ -69,7 +69,7 @@ const coins = () => {
               </div>
 
               <div className="price:w-[100px] text-left">
-                <td className=" sm:text-[11px]">{item.current_price}$</td>
+                <td className="">{item.current_price}$</td>
               </div>
               <div className="percentage text-white w-[150px] text-center flex  items center  justify-between mb-[15px] ">
                 {item.price_change_percentage_24h > 0 ? (
@@ -82,7 +82,7 @@ const coins = () => {
                   </div>
                 ) : (
                   <div className="day ">
-                    <a className=" text-red-500 w-[10rem] sm:text-[11px] text-center">
+                    <a className=" text-red-500 w-[10rem]  text-center">
                       <i class="uil uil-angle-down"></i>{" "}
                       {Math.round(item.price_change_percentage_24h * 100) / 100}
                       %

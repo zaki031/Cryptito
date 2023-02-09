@@ -8,18 +8,17 @@ const coin = ({ data }) => {
     <div className="h-[100vh] ">
       <Navbar />
       <div className="bg-light_bg rounded-[10px] h-full p-2 m-4 coin_info">
-        <div className="flex justify-between txt">
-          <div className="flex title">
+        <div className=" txt">
+          <div className="flex justify-center mt-10 title">
             <Image
               src={
                 data.image.large
               }
-              width={"150"}
+              width={"100"}
               height={"50"}
             />
             <div className="dmm">
                           <h1 className="ml-3 margin-auto text-[70px]">{data.name}</h1>
-                          <h4 className="ml-3">Genesis date  : {data.genesis_date}</h4>
 
             </div>
             <h4 className="h-6 px-3 margin-auto  mt-2 rounded-md text-light_bg bg-dark_bg">
@@ -27,20 +26,55 @@ const coin = ({ data }) => {
             </h4>
             
           </div>
+          <br /><br />
+         <div className="prices_container justify-center text-center  rounded-xl ">
+              
+          <div className="prices flex justify-evenly text-xl  text-dark_bg ">
+          <h1 className="   font-bold"><span className="font-bold">Price in usd :</span>${data.market_data.current_price.usd}</h1>
+          <h4 className=" "><span className="font-bold">Price in bitcoin :</span>  {data.market_data.current_price.btc} BTC</h4>
+          <h4 className=""><span className="font-bold">Price in ethereium :</span> {data.market_data.current_price.eth} ETH</h4>
+
+
+          </div><br />
+          <div className='content flex rounded-xl shadow-md p-4 flex-col	 justify-evenly bg-dark_bg text-white text-center mx-auto  align-center max-w-[740px]'>
+                    <table>
+                        <thead>
+                            <tr className="mb-5">
+                                <th>1h</th>
+                                <th>24h</th>
+                                <th>7d</th>
+                                <th>14d</th>
+                                <th>30d</th>
+                                <th>1yr</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                          
+                            <tr className="border border-white border-t-1 border-l-0 border-r-0 border-b-0">
+                                <td>{data.market_data?.price_change_percentage_1h_in_currency ? <p>{data.market_data.price_change_percentage_1h_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td>{data.market_data?.price_change_percentage_24h_in_currency ? <p>{data.market_data.price_change_percentage_24h_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td>{data.market_data?.price_change_percentage_24h_in_currency ? <p>{data.market_data.price_change_percentage_30d_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td>{data.market_data?.price_change_percentage_24h_in_currency ? <p>{data.market_data.price_change_percentage_7d_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td>{data.market_data?.price_change_percentage_24h_in_currency ? <p>{data.market_data.price_change_percentage_14d_in_currency.usd.toFixed(1)}%</p> : null}</td>
+                                <td>{data.market_data?.price_change_percentage_24h_in_currency ? <p>{data.market_data.price_change_percentage_1y_in_currency.usd.toFixed(1)}%</p> : null}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />br
+
+                    <p>
+                    {
+                            data.description ? data.description.en : ''
+                        }
+                        </p>
+                </div>
+         </div>
          
-          <div className="prices">
-          <h1 className=" mr-[100px] text-[70px] font-bold">${data.market_data.current_price.usd}</h1>
-          <h4 className="text-dark_bg "><span className="font-bold">Price in bitcoin :</span>  {data.market_data.current_price.btc} BTC</h4>
-          <h4 className="text-dark_bg "><span className="font-bold">Price in ethereium :</span> {data.market_data.current_price.eth} ETH</h4>
-
-
-          </div>
 
         </div>
-        <div className="links mt-5 ">
-            <a className="bg-dark_bg transition-[2s] hover:bg-hover_dark rounded-md text-white p-3" href={data.links.homepage[0]}>{data.links.homepage[0].replace('http://www.','').replace('https://www.')}</a>
-
-            </div>
+       
         
       </div>
     </div>
