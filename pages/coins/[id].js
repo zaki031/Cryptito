@@ -3,6 +3,7 @@ import Image from "next/image";
 import axios from "axios";
 import dollar from "../../public/dollar.png";
 import { useState } from "react";
+import Footer from '../../components/footer'
 const coin = ({ data }) => {
   const [website, SetWebsite] = useState("");
   const clean = data.description.en.replace(/<\/?[^>]+(>|$)/g, "");
@@ -174,14 +175,14 @@ const coin = ({ data }) => {
                       ) : null}{" "}
                     </div>
                   </div>
-                  <div className="right block border border-white border-l-1 border-t-0 border-r-0 border-b-0 p-4 ">
+                  <div className="right block border h-full border-white border-l-1 border-t-0 border-r-0 border-b-0 p-3 ">
                     <div className="row  p-3 flex   rounded-xl mb-10">
                       <h4 className="font-bold mr-[10px]">Market Cap : </h4>
                       {data.market_data?.market_cap ? (
                         <p>${data.market_data.market_cap.usd}</p>
                       ) : null}
                     </div>
-                    <div className="row flex  p-3 rounded-xl">
+                    <div className="row flex  p-3 pb-0 rounded-xl">
                       <h4 className="font-bold mr-[10px]">
                         Circulating Supply :{" "}
                       </h4>
@@ -202,6 +203,8 @@ const coin = ({ data }) => {
           </div>
         </div>
       </div>
+      <br /><br />
+      <Footer/>
     </div>
   );
 };
