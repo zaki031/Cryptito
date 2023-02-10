@@ -13,7 +13,7 @@ const nextConfig = {
      {
       protocol:'https',
       hostname:'assets8.lottiefiles.com',
-     }
+     },
     
     ],
     minimumCacheTTL:1500000,
