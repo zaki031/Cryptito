@@ -4,6 +4,8 @@ import axios from "axios";
 import { useState } from "react";
 const coin = ({ data }) => {
   const [website,SetWebsite] = useState('')
+  const clean = data.description.en.replace(/<\/?[^>]+(>|$)/g, "");
+
   return (
     <div className="h-[100vh] ">
       <Navbar />
@@ -62,12 +64,10 @@ const coin = ({ data }) => {
                             </tr>
                         </tbody>
                     </table>
-                    <br />br
+                    <br /><br />
 
                     <p>
-                    {
-                            data.description ? data.description.en : ''
-                        }
+                    {clean}
                         </p>
                 </div>
          </div>
