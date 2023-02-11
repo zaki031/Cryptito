@@ -11,7 +11,7 @@ const coin = ({ data }) => {
 
   return (
     
-    <div className="h-[100vh] p-0 w-full">
+    <div className="p-0 m-0 w-full">
       <Navbar />
       <div className="bg-light_bg shadow-xl rounded-[10px] p-2 w-full  coin_info">
         <div className=" txt">
@@ -163,16 +163,16 @@ const coin = ({ data }) => {
                 <p>{clean}</p>
               </div>
               </div>
-              <div className="nn bg-dark_bg max-h-[128px] rounded-xl">
+              <div className="nn bg-dark_bg lg:max-h-[128px] rounded-xl">
                 <div className="hh flex justify-evenly">
                   <div className="left block  p-4">
-                    <div className="row   flex  p-3">
+                    <div className="row    lg:flex sm:block  p-3">
                       <h4 className="font-bold  mr-[10px]">24 Hour Low : </h4>
                       {data.market_data?.low_24h ? (
                         <p>${data.market_data.low_24h.usd}</p>
                       ) : null}
                     </div>
-                    <div className="row flex ml-[14px] mr-[10px] ">
+                    <div className="row  lg:flex sm:block ml-[14px] mr-[10px] ">
                       <h4 className="font-bold mr-[10px] ">24 Hour High : </h4>
                       {data.market_data?.high_24h ? (
                         <p>${data.market_data.high_24h.usd}</p>
@@ -180,13 +180,13 @@ const coin = ({ data }) => {
                     </div>
                   </div>
                   <div className="right block border h-full border-white border-l-1 border-t-0 border-r-0 border-b-0 p-4 ">
-                    <div className="row  p-3  flex  mb-[-13px] ">
+                    <div className="row  p-3  lg:flex sm:block  mb-[-13px] ">
                       <h4 className="font-bold mr-[10px]">Market Cap : </h4>
                       {data.market_data?.market_cap ? (
                         <p>${data.market_data.market_cap.usd}</p>
                       ) : null}
                     </div>
-                    <div className="row flex  p-3  ">
+                    <div className="row  lg:flex sm:block  p-3  ">
                       <h4 className="font-bold mr-[10px]">
                         Circulating Supply :
                       </h4>
