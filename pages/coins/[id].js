@@ -13,7 +13,7 @@ const coin = ({ data }) => {
     
     <div className="h-[100vh] p-0 w-full">
       <Navbar />
-      <div className="bg-light_bg shadow-xl rounded-[10px] p-2 w-full m-4 coin_info">
+      <div className="bg-light_bg shadow-xl rounded-[10px] p-2 w-full  coin_info">
         <div className=" txt">
           <div className="flex justify-center mt-10 title">
             <div className="rank rounded-md bg-dark_bg text-white my-auto mr-[20px]  h-6 mt-10 px-3">
