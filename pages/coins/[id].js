@@ -7,8 +7,10 @@ import Footer from '../../components/footer'
 const coin = ({ data }) => {
   const [website, SetWebsite] = useState("");
   const clean = data.description.en.replace(/<\/?[^>]+(>|$)/g, "");
+  console.log(data.market_data.price_change_percentage_1y_in_currency)
 
   return (
+    
     <div className="h-[100vh] ">
       <Navbar />
       <div className="bg-light_bg shadow-xl rounded-[10px] p-2 m-4 coin_info">
@@ -137,7 +139,7 @@ const coin = ({ data }) => {
                         ) : null}
                       </td>
                       <td>
-                        {data.market_data.price_change_percentage_1y_in_currency!==" " ? (
+                        {data.market_data.price_change_percentage_1y_in_currency.usd == undefined ? (
                           <p className="ml-[30px]">
                             {data.market_data.price_change_percentage_1y_in_currency.usd}
                             %
