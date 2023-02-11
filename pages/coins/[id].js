@@ -137,15 +137,15 @@ const coin = ({ data }) => {
                         ) : null}
                       </td>
                       <td>
-                        {data.market_data
-                          ?.price_change_percentage_24h_in_currency ? (
+                        {data.market_data.price_change_percentage_1y_in_currency!==" " ? (
                           <p className="ml-[30px]">
-                            {data.market_data.price_change_percentage_1y_in_currency.usd.toFixed(
-                              1
-                            )}
+                            {data.market_data.price_change_percentage_1y_in_currency.usd}
                             %
                           </p>
-                        ) : null}
+                        ) :<p className="ml-[30px]">
+                        {data.market_data.price_change_percentage_1y_in_currency.usd.toFixed(1)}
+                        %
+                      </p> }
                       </td>
                     </tr>
                   </tbody>
@@ -219,7 +219,7 @@ export async function getServerSideProps({ params }) {
   );
   const data = response.data;
   const nigger = data.links.homepage[0];
-  console.log(nigger.replace("http://www.", ""));
+  console.log(data.market_data.price_change_percentage_1y_in_currency.usd)
 
   return {
     props: {
