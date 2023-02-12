@@ -1,4 +1,27 @@
 @import "tailwindcss/base";
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #F6F9FC;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0A2540;
+  border-radius: 14px;
+  border: 3px solid #F6F9FC;
+}
+.namosa::-webkit-scrollbar-track {
+  background: #0A2540;
+  border-radius: 5px;
+}
+.namosa::-webkit-scrollbar-thumb {
+  background-color: #F6F9FC;
+  border-radius: 14px;
+  border: 3px solid #0A2540;
+}
 
 @import "tailwindcss/components";
 
@@ -18,3 +41,4 @@ a {
 * {
   box-sizing: border-box;
 }
+

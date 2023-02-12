@@ -70,7 +70,8 @@ const coin = ({ data }) => {
             <br />
 
             <div className="content lg:flex sm:block rounded-xl justify-evenly  p-4   text-white text-center  ">
-              <div className="namosa max-w-[570px] overflow-auto">
+              <div className="namosa max-w-[570px]  overflow-auto">
+         
                 <div className="tbl my-auto  align-center text-2xl p-4 overflow-auto rounded-xl bg-dark_bg">
                   <table className="">
                     <thead className="mb-5 ml-[40px]">
@@ -171,7 +172,7 @@ const coin = ({ data }) => {
                 </div>
               </div>
               <div className="nn bg-dark_bg lg:max-h-[128px] rounded-xl">
-                <div className="hh flex justify-evenly">
+                <div className="hh block sm:flex justify-evenly">
                   <div className="left block  p-4">
                     <div className="row    lg:flex sm:block  p-3">
                       <h4 className="font-bold  mr-[10px]">24 Hour Low : </h4>
