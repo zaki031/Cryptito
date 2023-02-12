@@ -2,29 +2,27 @@ import Navbar from "../../components/navbar";
 import Image from "next/image";
 import axios from "axios";
 import dollar from "../../public/dollar.png";
-import { useState } from "react";
-import Footer from '../../components/footer'
 const coin = ({ data }) => {
-  const [website, SetWebsite] = useState("");
   const clean = data.description.en.replace(/<\/?[^>]+(>|$)/g, "");
-  console.log(data.market_data.price_change_percentage_1y_in_currency)
-
   return (
-    
     <div className="p-0 m-0 w-full">
       <Navbar />
       <div className="bg-light_bg shadow-xl rounded-[10px] p-2 w-full  coin_info">
         <div className=" txt">
           <div className="flex justify-center mt-10 title">
-            <div className="rank rounded-md bg-dark_bg text-white my-auto mr-[20px]  h-6 mt-10 px-3">
-                          <h3 >#{data.market_cap_rank}</h3>
-
+            <div className="rank rounded-md bg-dark_bg text-white my-auto mr-[20px]  h-6 px-3">
+              <h3>#{data.market_cap_rank}</h3>
             </div>
-            <Image src={data.image.large} width={"100"} height={"50"} />
+            <Image
+              src={data.image.large}
+              width={"50"}
+              height={"30"}
+              className="w-[80px] h-[80px]"
+            />
             <div className="dmm">
               <h1 className="ml-3 margin-auto text-[40px] ">{data.name}</h1>
             </div>
-            <h4 className="h-6 px-3 margin-auto  mt-2 rounded-md text-light_bg bg-dark_bg">
+            <h4 className="h-6 px-3 margin-auto ml-3 mt-2 rounded-md text-light_bg bg-dark_bg">
               {data.symbol}
             </h4>
           </div>
@@ -33,8 +31,12 @@ const coin = ({ data }) => {
           <div className="prices_container justify-center text-center  rounded-xl ">
             <div className="prices lg:flex sm:block justify-evenly text-xl   text-dark_bg ">
               <div className="btc flex gap-4 mb-[10px]">
-                <Image src={dollar} width="30" height="20"                   className="w-[30px] h-[30px]"
-></Image>
+                <Image
+                  src={dollar}
+                  width="30"
+                  height="20"
+                  className="w-[30px] h-[30px]"
+                ></Image>
                 <h4 className="">
                   <span className="font-bold">Price in usd :</span>$
                   {data.market_data.current_price.usd}
@@ -46,7 +48,6 @@ const coin = ({ data }) => {
                   width="30"
                   height="20"
                   className="w-[30px] h-[30px]"
-
                 ></Image>
                 <h4 className=" ">
                   <span className="font-bold">Price in bitcoin :</span>{" "}
@@ -61,107 +62,113 @@ const coin = ({ data }) => {
                   className="w-[30px] h-[30px]"
                 ></Image>
                 <h4 className="">
-                  <span className="font-bold">Price in ethereium :</span>{" "}
+                  <span className="font-bold">Price in ethereium :</span>
                   {data.market_data.current_price.eth} ETH
                 </h4>
               </div>
             </div>
             <br />
-           
+
             <div className="content lg:flex sm:block rounded-xl justify-evenly  p-4   text-white text-center  ">
               <div className="namosa max-w-[570px] overflow-auto">
+                <div className="tbl my-auto  align-center text-2xl p-4 overflow-auto rounded-xl bg-dark_bg">
+                  <table className="">
+                    <thead className="mb-5 ml-[40px]">
+                      <tr>
+                        <th>1h </th>
+                        <th>24h </th>
+                        <th>7d </th>
+                        <th>14d </th>
+                        <th>30d </th>
+                        <th>1yr </th>
+                      </tr>
+                    </thead>
 
-              <div className="tbl my-auto  align-center text-2xl p-4 overflow-auto rounded-xl bg-dark_bg">
-                <table className="">
-                  <thead className="mb-5 ml-[40px]">
-                    <tr>
-                      <th>1h </th>
-                      <th>24h </th>
-                      <th>7d </th>
-                      <th>14d </th>
-                      <th>30d </th>
-                      <th>1yr </th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <tr className="border  border-white border-t-1 border-l-0 border-r-0 border-b-0">
-                      <td>
-                        {data.market_data
-                          ?.price_change_percentage_1h_in_currency ? (
-                          <p>
-                            {data.market_data.price_change_percentage_1h_in_currency.usd.toFixed(
-                              1
-                            )}
-                            %
-                          </p>
-                        ) : null}
-                      </td>
-                      <td>
-                        {data.market_data
-                          ?.price_change_percentage_24h_in_currency ? (
-                          <p className="ml-[30px]">
-                            {data.market_data.price_change_percentage_24h_in_currency.usd.toFixed(
-                              1
-                            )}
-                            %
-                          </p>
-                        ) : null}
-                      </td>
-                      <td>
-                        {data.market_data
-                          ?.price_change_percentage_24h_in_currency ? (
-                          <p className="ml-[30px]">
-                            {data.market_data.price_change_percentage_30d_in_currency.usd.toFixed(
-                              1
-                            )}
-                            %
-                          </p>
-                        ) : null}
-                      </td>
-                      <td>
-                        {data.market_data
-                          ?.price_change_percentage_24h_in_currency ? (
-                          <p className="ml-[30px]">
-                            {data.market_data.price_change_percentage_7d_in_currency.usd.toFixed(
-                              1
-                            )}
-                            %
-                          </p>
-                        ) : null}
-                      </td>
-                      <td>
-                        {data.market_data
-                          ?.price_change_percentage_24h_in_currency ? (
-                          <p className="ml-[30px]">
-                            {data.market_data.price_change_percentage_14d_in_currency.usd.toFixed(
-                              1
-                            )}
-                            %
-                          </p>
-                        ) : null}
-                      </td>
-                      <td>
-                        {data.market_data.price_change_percentage_1y_in_currency.usd == undefined ? (
-                          <p className="ml-[30px]">
-                            {data.market_data.price_change_percentage_1y_in_currency.usd}
-                            %
-                          </p>
-                        ) :<p className="ml-[30px]">
-                        {data.market_data.price_change_percentage_1y_in_currency.usd.toFixed(1)}
-                        %
-                      </p> }
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                
-
-              </div>
-              <br />
-<div className="description bg-dark_bg  mb-[50px] rounded-xl text-white text-center p-4">
-                <p>{clean}</p>
-              </div>
+                    <tbody>
+                      <tr className="border  border-white border-t-1 border-l-0 border-r-0 border-b-0">
+                        <td>
+                          {data.market_data
+                            ?.price_change_percentage_1h_in_currency ? (
+                            <p>
+                              {data.market_data.price_change_percentage_1h_in_currency.usd.toFixed(
+                                1
+                              )}
+                              %
+                            </p>
+                          ) : null}
+                        </td>
+                        <td>
+                          {data.market_data
+                            ?.price_change_percentage_24h_in_currency ? (
+                            <p className="ml-[30px]">
+                              {data.market_data.price_change_percentage_24h_in_currency.usd.toFixed(
+                                1
+                              )}
+                              %
+                            </p>
+                          ) : null}
+                        </td>
+                        <td>
+                          {data.market_data
+                            ?.price_change_percentage_24h_in_currency ? (
+                            <p className="ml-[30px]">
+                              {data.market_data.price_change_percentage_30d_in_currency.usd.toFixed(
+                                1
+                              )}
+                              %
+                            </p>
+                          ) : null}
+                        </td>
+                        <td>
+                          {data.market_data
+                            ?.price_change_percentage_24h_in_currency ? (
+                            <p className="ml-[30px]">
+                              {data.market_data.price_change_percentage_7d_in_currency.usd.toFixed(
+                                1
+                              )}
+                              %
+                            </p>
+                          ) : null}
+                        </td>
+                        <td>
+                          {data.market_data
+                            ?.price_change_percentage_24h_in_currency ? (
+                            <p className="ml-[30px]">
+                              {data.market_data.price_change_percentage_14d_in_currency.usd.toFixed(
+                                1
+                              )}
+                              %
+                            </p>
+                          ) : null}
+                        </td>
+                        <td>
+                          {data.market_data
+                            .price_change_percentage_1y_in_currency.usd ==
+                          undefined ? (
+                            <p className="ml-[30px]">
+                              {
+                                data.market_data
+                                  .price_change_percentage_1y_in_currency.usd
+                              }
+                              %
+                            </p>
+                          ) : (
+                            <p className="ml-[30px]">
+                              {data.market_data.price_change_percentage_1y_in_currency.usd.toFixed(
+                                1
+                              )}
+                              %
+                            </p>
+                          )}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <div className="description bg-dark_bg  mb-[50px] rounded-xl text-white text-center p-4">
+                  <p>{clean}</p>
+                </div>
               </div>
               <div className="nn bg-dark_bg lg:max-h-[128px] rounded-xl">
                 <div className="hh flex justify-evenly">
@@ -200,14 +207,12 @@ const coin = ({ data }) => {
 
               <br />
               <br />
-              
-              
             </div>
-            
           </div>
         </div>
       </div>
-      <br /><br />
+      <br />
+      <br />
     </div>
   );
 };
@@ -222,7 +227,7 @@ export async function getServerSideProps({ params }) {
   );
   const data = response.data;
   const nigger = data.links.homepage[0];
-  console.log(data.market_data.price_change_percentage_1y_in_currency.usd)
+  console.log(data.market_data.price_change_percentage_1y_in_currency.usd);
 
   return {
     props: {

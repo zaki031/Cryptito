@@ -64,7 +64,7 @@ export default function Home() {
                 >
                   See more <i className="uil uil-arrow-down "></i>
                 </LinkS>
-                <a className="text-md py-4 hover:bg-dark_bg px-4 border-4 hover:text-light_bg lg:px-[50px] sm:px-[30px] text-dark_bg  see_more rounded-xl border-dark_bg bg-transparent" href="">
+                <a className="text-md py-4 hover:bg-dark_bg px-4 border-4 hover:text-light_bg lg:px-[50px] sm:px-[30px] text-dark_bg  see_more rounded-xl border-dark_bg bg-transparent" href=" lg:flex sm:block">
                 Github repo
               </a>
               </div>
@@ -73,8 +73,8 @@ export default function Home() {
               
             </div>
           </div>
-          <div className="tswira   h-85">
-            <Image src={pic} width="600" height="50" className="z-50   h-55" />
+          <div className="tswira  h-85">
+            <Image src={pic} width="600" height="50" className="z-50   m-auto h-55" />
           </div>
         </div>
 

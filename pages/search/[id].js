@@ -3,8 +3,6 @@ import Navbar from "../../components/navbar";
 import axios from "axios";
 
 const coin = ({ data }) => {
-    const [coins,SetCoins] = useState([])
-    const [names, setNames] = useState([])
     return ( 
         useEffect(()=>{
            
