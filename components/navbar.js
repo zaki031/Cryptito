@@ -1,3 +1,4 @@
+import { Input } from "postcss";
 import React from "react";
 
 const navbar = () => {
@@ -15,7 +16,17 @@ const navbar = () => {
               Cryptito
             </span>
           </a>
-          <button
+          <form>
+        <label class="relative block">
+            <a href="" class="absolute inset-y-0 left-0 flex items-center pl-3">
+                
+            <i class="uil uil-search"></i>
+            </a>
+            <input
+                class="w-full bg-white placeholder:font-italitc border border-dark_bg  rounded-xl py-1  pl-10 pr-4 focus:outline-none"
+                placeholder="Search a coin " type="text" />
+        </label>
+    </form>          <button
             data-collapse-toggle="navbar-default"
             type="button"
             className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
