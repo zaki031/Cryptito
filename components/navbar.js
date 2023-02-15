@@ -1,7 +1,10 @@
 import { Input } from "postcss";
 import React from "react";
+import {  useState } from "react";
 
 const navbar = () => {
+  const [search, SetSearch] = useState("");
+
   return (
     <div className="w-full bg-hero ">
       <link
@@ -16,14 +19,16 @@ const navbar = () => {
               Cryptito
             </span>
           </a>
-          <form>
+          <form className=" hidden sm:block" action={`/coins/${search}`}>
         <label class="relative block">
-            <a href="" class="absolute inset-y-0 left-0 flex items-center pl-3">
+            <a href={`/coins/${search}`} class="absolute inset-y-0 left-0 flex items-center pl-3">
                 
             <i class="uil uil-search"></i>
             </a>
             <input
-                class="w-full bg-white placeholder:font-italitc border border-dark_bg  rounded-xl py-1  pl-10 pr-4 focus:outline-none"
+                value={search}
+                onChange={(event) => SetSearch(event.target.value)}
+                className=" bg-white placeholder:font-italitc border w-[400px] border-dark_bg shadow-md rounded-xl py-1  pl-10 pr-4 focus:outline-none"
                 placeholder="Search a coin " type="text" />
         </label>
     </form>          <button

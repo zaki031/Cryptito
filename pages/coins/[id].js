@@ -111,36 +111,63 @@ const coin = ({ data }) => {
                         </td>
                         <td>
                           {data.market_data
-                            ?.price_change_percentage_24h_in_currency ? (
+                            .price_change_percentage_30d_in_currency.usd ==
+                          undefined ? (
+                            <p className="ml-[30px]">
+                              {
+                                data.market_data
+                                  .price_change_percentage_30d_in_currency.usd
+                              }
+                              %
+                            </p>
+                          ) : (
                             <p className="ml-[30px]">
                               {data.market_data.price_change_percentage_30d_in_currency.usd.toFixed(
                                 1
                               )}
                               %
                             </p>
-                          ) : null}
+                          )}
                         </td>
                         <td>
                           {data.market_data
-                            ?.price_change_percentage_24h_in_currency ? (
+                            .price_change_percentage_7d_in_currency.usd ==
+                          undefined ? (
+                            <p className="ml-[30px]">
+                              {
+                                data.market_data
+                                  .price_change_percentage_7d_in_currency.usd
+                              }
+                              %
+                            </p>
+                          ) : (
                             <p className="ml-[30px]">
                               {data.market_data.price_change_percentage_7d_in_currency.usd.toFixed(
                                 1
                               )}
                               %
                             </p>
-                          ) : null}
+                          )}
                         </td>
                         <td>
                           {data.market_data
-                            ?.price_change_percentage_24h_in_currency ? (
+                            .price_change_percentage_14d_in_currency.usd ==
+                          undefined ? (
+                            <p className="ml-[30px]">
+                              {
+                                data.market_data
+                                  .price_change_percentage_14d_in_currency.usd
+                              }
+                              %
+                            </p>
+                          ) : (
                             <p className="ml-[30px]">
                               {data.market_data.price_change_percentage_14d_in_currency.usd.toFixed(
                                 1
                               )}
                               %
                             </p>
-                          ) : null}
+                          )}
                         </td>
                         <td>
                           {data.market_data
