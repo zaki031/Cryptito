@@ -1,4 +1,7 @@
 import bg from "../public/bg.jpg";
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide'
+import Jump from 'react-reveal/Jump';
 
 import {
   Link,
@@ -44,17 +47,23 @@ export default function Home() {
           />
           <title>Cryptito</title>
         </Head>
+        <Slide top>
         <Navbar name="navbar"/>
+        </Slide>
 
+       
         <div className="lg:flex justify-between  text-white h-[90vh] landing bg-white" name="top">
           <div className="mt-[150px]   txt">
+          <Fade top>
+
             <h1 className="mx-10 font-semibold text-7xl  text-dark_bg">
               Cryptito
             </h1>
             <p className="mx-10  mt-10 text-3xl text-dark_bg">
               For live crypto currency news and prices
             </p>
-
+            </Fade>
+<Slide left>
             <div className="lg:flex sm:block  mx-20  mt-10 gap-[80px] bh-w ">
               <div className="mt-[20px]  mx-[-40px] flex justify-between  lg:w-[500px] ">
                 <LinkS
@@ -70,24 +79,31 @@ export default function Home() {
               </div>
               
               
+            
               
             </div>
+            </Slide>
           </div>
+
+          <Slide right>
           <div className="tswira  h-85">
             <Image src={pic} width="600" height="50" className="z-50   m-auto h-55" />
           </div>
+          </Slide>
         </div>
 
-        <div class="custom-shape-divider-top-1675418296 ">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill fill-main_color "></path>
-    </svg>
-</div>
-
+        
+        <fade>
+        
         <Trend name="trend" />
+        
+        </fade>
+        <Jump>
         <button className="fixed right-4 bottom-4  text-white text-3xl rounded-[100%] p-3 bg-dark_bg" onClick={dmm}>
         <i class="uil uil-arrow-up"></i>
         </button>
+        </Jump>
+        <br /><br /><br />
 
         <Coins/>
         <Footer/>
