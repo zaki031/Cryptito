@@ -27,11 +27,12 @@ const all_coins = async () => {
           <p className="hidden lg:block">market cap</p>
         </div>
         {data.map((item) => (
-          <div className="shadow-sm grid text-center lg:grid-cols-7 grid-cols-4 justify-between  bg-light lg:px-[20px] py-[10px] mb-[10px] rounded-lg">
-            <p className="hidden lg:block">#{item.market_cap_rank}</p>
+          <div key={item.market_cap_rank} className="shadow-sm grid text-center lg:grid-cols-7 grid-cols-4 justify-between  bg-light lg:px-[20px] py-[10px] mb-[10px] rounded-lg">
+            <p  className="hidden lg:block">#{item.market_cap_rank}</p>
             <Image
               className="mx-auto"
               src={item.image}
+              alt="coin_icon"
               width={25}
               height={25}
             />

@@ -19,7 +19,7 @@ const trending = async () => {
              { data.coins? 
             data.coins.map((item)=>(
 
-                <a className="grid relative lg:grid-cols-4 grid-cols-3  hover:-translate-y-[2px] hover:duration-500 shadow-sm bg-light px-[20px] py-[10px] mb-[10px] rounded-lg">
+                <a key={item.item.id} className="grid relative lg:grid-cols-4 grid-cols-3  hover:-translate-y-[2px] hover:duration-500 shadow-sm bg-light px-[20px] py-[10px] mb-[10px] rounded-lg">
                     <Image src={item.item.small} width={50} height={50} />
                     <p className='text-sm hidden lg:block mt-[15px] '>#{item.item.market_cap_rank}</p>
                     <p className='my-auto  ' >{item.item.name}</p>
