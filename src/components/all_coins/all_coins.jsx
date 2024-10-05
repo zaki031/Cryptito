@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 async function getCoins() {
   const res = await fetch(
     "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false"
@@ -9,7 +10,6 @@ async function getCoins() {
 
 const all_coins = async () => {
   const data = await getCoins();
-  console.log(data);
   return (
     <div>
       <h2 className="text-3xl font-[450]">
@@ -27,7 +27,7 @@ const all_coins = async () => {
           <p className="hidden lg:block">market cap</p>
         </div>
         {data.map((item) => (
-          <div key={item.market_cap_rank} className="shadow-sm grid text-center lg:grid-cols-7 grid-cols-4 justify-between  bg-light lg:px-[20px] py-[10px] mb-[10px] rounded-lg">
+          <Link href={"/"+item.id} key={item.market_cap_rank} className="shadow-sm grid text-center lg:grid-cols-7 grid-cols-4 justify-between  bg-light lg:px-[20px] py-[10px] mb-[10px] rounded-lg">
             <p  className="hidden lg:block">#{item.market_cap_rank}</p>
             <Image
               className="mx-auto"
@@ -49,7 +49,7 @@ const all_coins = async () => {
               {item.price_change_percentage_24h.toFixed(2)}%
             </p>
             <p className="hidden lg:block">{item.market_cap}$</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

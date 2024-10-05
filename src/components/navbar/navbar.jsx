@@ -3,7 +3,7 @@ import { FaGithub,FaMoon } from "react-icons/fa";
 const navbar = () => {
   return (
     <div className='flex  justify-between mt-[10px]'>
-        <a href="" className='font-bold text-xl'>Cryptito</a>
+        <a href="/" className='font-bold text-xl'>Cryptito</a>
         <div className="links  flex  gap-[10px] ">
             <button className='rounded-[50%] hidden text-[#fff] px-[8px] py-[7px] bg-[#000000]'><FaMoon />
             </button>

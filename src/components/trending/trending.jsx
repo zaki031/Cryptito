@@ -10,7 +10,6 @@ async function getTrending(){
 
 const trending = async () => {
     const data = await getTrending();
-    console.log(data.coins[0].item.name);
     return (
     <div>
         <h2 id="trend" className='text-3xl font-[450]'>Trending cryptocurrencies</h2>
@@ -19,16 +18,16 @@ const trending = async () => {
              { data.coins? 
             data.coins.map((item)=>(
 
-                <a key={item.item.id} className="grid relative lg:grid-cols-4 grid-cols-3  hover:-translate-y-[2px] hover:duration-500 shadow-sm bg-light px-[20px] py-[10px] mb-[10px] rounded-lg">
+                <Link href={"/"+item.item.id} key={item.item.id} className="grid relative lg:grid-cols-4 grid-cols-3  hover:-translate-y-[2px] hover:duration-500 shadow-sm bg-light px-[20px] py-[10px] mb-[10px] rounded-lg">
                     <Image src={item.item.small} width={50} height={50} />
                     <p className='text-sm hidden lg:block mt-[15px] '>#{item.item.market_cap_rank}</p>
                     <p className='my-auto  ' >{item.item.name}</p>
                     <p className='my-auto text-left text-[rgb(150,141,141)]'>/{item.item.symbol}/</p>
                     <FaAngleRight className='absolute  hidden lg:block right-2 top-[25px]' />
 
-                </a>
+                </Link>
             ))
-            : console.log("wtf")
+            : <p>loading</p>
         }
         </div>
        
